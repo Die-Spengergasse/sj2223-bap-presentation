@@ -1,0 +1,9 @@
+image: pandoc/latex:latest
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Build and Test
+          script:
+            - pandoc --to=beamer --from=markdown src/bap-presentation.md -o bap-presentation.pdf 
