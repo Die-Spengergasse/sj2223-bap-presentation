@@ -4,6 +4,18 @@
 
 ## Vision
 
+ _Programming_ is one of the _core competencies_ of Software Engineers
+
+ . . .
+
+ _Expertise supporting the Software Engineering Process_
+ we really _wished_ you to know
+
+ (and which won't fit into `POS`)
+
+
+## Vision
+
  Software Engineering Methologies and Practises to achieve
 
  * Infrastructure as code
