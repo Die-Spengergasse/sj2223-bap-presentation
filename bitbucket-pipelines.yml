@@ -6,4 +6,6 @@ pipelines:
       - step:
           name: Build and Test
           script:
-            - pandoc --to=beamer --from=markdown src/bap-presentation.md -o bap-presentation.pdf 
+            - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pdf 
+          artifacts:
+            - build/bap-presentation.pdf
