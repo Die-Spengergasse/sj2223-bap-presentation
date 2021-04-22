@@ -25,7 +25,7 @@
 
 ## Team
 
-![going into teaching](../src/have-you-thought-of-going-into-teaching.png)
+![going into teaching](img/have-you-thought-of-going-into-teaching.png)
 
 
 ## Topics
@@ -40,7 +40,7 @@
 
 ## Is it hard
 
-![is it hard](../src/is-it-hard.png)
+![is it hard](img/is-it-hard.png)
 
 
 ## Facts
