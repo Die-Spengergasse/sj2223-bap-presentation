@@ -1,4 +1,4 @@
-% Business Applications BAP
+% Business Applications `BAP`
 % Florian Hassanen & Joachim Grüneis
 % 2021/2022
 
@@ -57,7 +57,7 @@
 
 ## Facts
 
-* Tightly coupled with POS
+* Tightly coupled with `POS`
 * Extremely useful and good practice in diploma projects
 * Lots of hands-on doing
     * Infrastructure as code (development and runtime)
