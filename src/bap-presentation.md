@@ -43,6 +43,7 @@
 ## Topics
 
 * General Agile Practices
+  * Focus on _Software Craftsmanship_ rather than _Management Theory_
 * Source Code Management
 * Build Management / Project Structure Layout
 * Deployment Architectures and Strategies (incl containers)
