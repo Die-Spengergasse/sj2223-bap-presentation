@@ -65,3 +65,12 @@
     * Infrastructure as code (development and runtime)
     * Documentation as code
     * Continuous integration/deployment/delivery (as code)
+
+
+## Questions?
+
+_And hopefully some answers_
+
+. . .
+
+_Thank you very much!_
