@@ -12,5 +12,6 @@ pipelines:
           - build/bap-presentation.pdf
     - step:
         name: deployment-to-downloads
+        image: alpine/curl:3.14
         script:
           - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"${BITBUCKET_CLONE_DIR}/build/bap-presentation.pdf"
