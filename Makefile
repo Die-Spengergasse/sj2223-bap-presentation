@@ -26,7 +26,8 @@ $(output)/%.html: $(source)/%.md | $(output)/img
 		-o $@
 
 $(output)/img: img
-	cp -rT $< $@
+	rm -rf $@
+	cp -r $< $@
 
 $(output)/%.pptx: $(source)/%.md
 	pandoc \
