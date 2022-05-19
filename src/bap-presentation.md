@@ -16,7 +16,7 @@
 
 ## Vision
 
- Software Engineering Methologies and Practises to achieve
+ Software Engineering Methodologies and Practices to achieve
 
  * Infrastructure as code
  * Documentation as code
