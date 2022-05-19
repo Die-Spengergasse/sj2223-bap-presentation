@@ -21,8 +21,8 @@
  * Infrastructure as code
  * Documentation as code
  * Always ready to deliver
- * 100% Automated
- * 100% Reproduceable
+ * High degree of Automation
+ * 100% Reproducibility
 
 
 ## Team
