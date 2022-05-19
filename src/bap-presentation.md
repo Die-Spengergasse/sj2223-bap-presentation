@@ -34,6 +34,7 @@
     * seit 1992 als Software Entwickler tätig
     * seit 2013 Fachtheorielehrer an der Spengergasse in Nebenbeschäftigung
 
+~This\ slide\ intentionally\ in\ german,\ because\ _Fachtheorielehrer_~
 
 ## Team
 
