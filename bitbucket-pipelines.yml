@@ -6,12 +6,24 @@ pipelines:
         name: Build and Test
         script:
           - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pdf
-          - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.html
-          - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pptx
+          - cp -r img build/img
+          - pandoc --to=revealjs --standalone --from=markdown src/bap-presentation.md -o build/bap-presentation.html
+          - pandoc --to=pptx --from=markdown src/bap-presentation.md -o build/bap-presentation.pptx
         artifacts:
-          - build/bap-presentation.pdf
+          - build/*
+          - build/img/*
     - step:
         name: deployment-to-downloads
         image: alpine/curl:3.14
         script:
           - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"${BITBUCKET_CLONE_DIR}/build/bap-presentation.pdf"
+    - step:
+        name: Deploy artifacts using SCP to PROD
+        deployment: production
+        script:
+          - pipe: atlassian/scp-deploy:0.3.3
+            variables:
+              USER: $SCP_DEPLOY_USER
+              SERVER: $SCP_DEPLOY_HOST
+              REMOTE_PATH: '/home/spg-bitbucket/bap'
+              LOCAL_PATH: 'build/*'
