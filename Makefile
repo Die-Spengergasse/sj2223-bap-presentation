@@ -16,7 +16,7 @@ $(output)/%.pdf: $(source)/%.md
 		-o $@
 
 
-$(output)/%.html: $(source)/%.md
+$(output)/%.html: $(source)/%.md | $(output)/img
 	pandoc \
 		--variable theme=moon \
 		--to=revealjs \
@@ -25,6 +25,8 @@ $(output)/%.html: $(source)/%.md
 		--from=markdown $< \
 		-o $@
 
+$(output)/img: img
+	cp -rT $< $@
 
 $(output)/%.pptx: $(source)/%.md
 	pandoc \
