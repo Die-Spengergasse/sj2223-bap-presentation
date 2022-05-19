@@ -19,7 +19,7 @@
  Software Engineering Methodologies and Practices to achieve
 
  * Infrastructure as code
- * Documentation as ?????
+ * Documentation as code
  * Always ready to deliver
  * High degree of Automation
  * 100% Reproducibility
