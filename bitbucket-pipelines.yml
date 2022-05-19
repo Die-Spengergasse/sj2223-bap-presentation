@@ -2,10 +2,15 @@ image: pandoc/latex:latest
 
 pipelines:
   default:
-    - parallel:
-      - step:
-          name: Build and Test
-          script:
-            - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pdf 
-          artifacts:
-            - build/bap-presentation.pdf
+    - step:
+        name: Build and Test
+        script:
+          - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pdf
+          - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.html
+          - pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pptx
+        artifacts:
+          - build/bap-presentation.pdf
+    - step:
+        name: deployment-to-downloads
+        script:
+          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"${BITBUCKET_CLONE_DIR}/build/bap-presentation.pdf"
