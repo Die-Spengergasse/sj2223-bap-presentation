@@ -1,6 +1,6 @@
 % Business Applications `BAP`
 % Florian Hassanen & Joachim Grüneis
-% 2021/2022
+% 2022/2023
 
 ## Vision
 
@@ -30,6 +30,7 @@
 * Florian Hassanen
     * seit 2008 als Software Entwickler tätig
     * seit 2014 Fachtheorielehrer an der Spengergasse in Nebenbeschäftigung
+    * bis Juni 2023 in Karenz
 * Joachim Grüneis
     * seit 1992 als Software Entwickler tätig
     * seit 2013 Fachtheorielehrer an der Spengergasse in Nebenbeschäftigung
@@ -49,7 +50,7 @@
 * Build Management / Project Structure Layout
 * Deployment Architectures and Strategies (incl containers)
 * Software Quality Management
-* Test Processes and Methods
+* Test Processes, Methods and Tools
 
 
 ## Is it hard
