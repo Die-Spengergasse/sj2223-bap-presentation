@@ -1,0 +1,35 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: pandoc/latex:latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: prepare iamges
+      run: cp -r img build/img
+    
+    - name: to pdf
+      run: pandoc --to=beamer --from=markdown src/bap-presentation.md -o build/bap-presentation.pdf
+
+    - name: to revealjs
+      run: pandoc --to=revealjs --standalone --from=markdown src/bap-presentation.md -o build/bap-presentation.html
+    
+    - name: to pptx
+      run: pandoc --to=pptx --from=markdown src/bap-presentation.md -o build/bap-presentation.pptx
+
+    - name: archive as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: presentations
+        path: |
+          build/
