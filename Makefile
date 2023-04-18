@@ -40,4 +40,4 @@ $(output)/%.pptx: $(source)/%.md
 
 
 clean:
-	rm -f $(output)/*
+	rm -fR $(output)/*

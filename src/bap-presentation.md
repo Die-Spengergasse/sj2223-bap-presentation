@@ -68,6 +68,14 @@
     * Continuous integration/deployment/delivery (as code)
 
 
+## Funny Stuff
+
+* Esoteric Programming Languages
+* like Piet:
+
+![Piet Program](img/Piet_Program_Hello_World.gif)
+
+
 ## Questions?
 
 _And hopefully some answers_
